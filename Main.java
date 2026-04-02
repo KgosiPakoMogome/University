@@ -32,9 +32,10 @@ public class Main{
            
         c.listStudents();
 
-
-///////Lecturer l = new Lecturer("200000000", "KaELO","KFCDKFN","mATH",333.3);
-       // l.getDetails();
-
+    }
+}
+private static void inputValidation(int choice) throws WrongInputException{
+        if (choice < 0 || choice > 1) {
+            throw new WrongInputException("Choice must be 0 or 1");
     }
 }
