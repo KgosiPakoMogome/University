@@ -12,7 +12,7 @@ public class Course{
        students = new ArrayList<>();
 
     }
-    public void addStudent(Student s){
+    public void  addStudent(Student s){
         students.add(s);
     }
     
