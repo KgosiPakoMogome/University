@@ -1,3 +1,4 @@
+package src.models;
 
 public class Student extends Person{
     private String major;
