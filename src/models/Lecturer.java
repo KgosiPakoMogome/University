@@ -1,4 +1,4 @@
-
+package src.models;
 public class Lecturer extends Person{
     private String department;
     private double salary;
