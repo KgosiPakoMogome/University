@@ -1,4 +1,4 @@
-
+package src.Verb;
 import java.util.ArrayList;
 public class Course{
     private Lecturer lecturer;
