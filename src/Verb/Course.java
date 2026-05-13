@@ -1,5 +1,8 @@
 package src.Verb;
 import java.util.ArrayList;
+import src.models.Lecturer;
+import src.models.Student;
+
 public class Course{
     private Lecturer lecturer;
     private String courseCode;
@@ -12,7 +15,7 @@ public class Course{
        students = new ArrayList<>();
 
     }
-    public void  addStudent(Student s){
+    public void addStudent(Student s){
         students.add(s);
     }
     
@@ -20,5 +23,14 @@ public class Course{
         for (Student s : students){
             System.out.println(s.getDetails());
         }
+    }
+    public void searchStudent(String id){
+        for (Student s : students){
+            if (s.getId().equals(id)){
+                System.out.println(s.getDetails());
+                return;
+            }
+        }
+        System.out.println("Student not found");
     }
 }

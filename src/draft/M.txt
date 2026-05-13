@@ -49,3 +49,19 @@ private static void inputValidation(int choice) throws WrongInputException{
             throw new WrongInputException("Choice must be 0 or 1");
         }
        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+            System.out.println("Add another student");
+            choice = pk.nextInt();
+            pk.nextLine(); // Consume the newline character

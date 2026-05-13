@@ -4,10 +4,10 @@ public class Student extends Person{
     private String major;
     private double gpa;
 
-    public Student (String id,String name,String email, String major,double gpa){
+    public Student (String id,String name,String email, String major){
         super(id, name, email);
         this.major = major;
-        SetGpa(gpa);
+        this.gpa = 0.0;
     }
     public void SetGpa(double gpa){
         if (gpa >= 0.0 && gpa <= 4.0){
