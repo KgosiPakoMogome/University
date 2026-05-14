@@ -21,6 +21,7 @@ public class Main {
             System.out.println("0.Exit");
             choice= pk.nextInt();
             pk.nextLine();
+        try {
             switch(choice){
             case 1:
                 System.out.println("Enter id");
@@ -34,15 +35,20 @@ public class Main {
 
                 System.out.println("Major?");
                 String major = pk.nextLine();
-                
+
                 Student p = new Student(id, name, email, major);
                 c.addStudent(p);
                 break;
 
             case 2:
-                System.out.println("GPa?");
+                System.out.println("Enter student Id");
+                String studentid = pk.nextLine();
+               Student K= c.findStudent(studentid);
+                if(K == null){System.out.println("Student not found");}
+                System.out.println("Enter Gpa");
                 double gpa = pk.nextDouble();
-                pk.nextLine(); // Consume the newline character
+                pk.nextLine(); 
+                studentid.addGpa
                 break;
             case 3:
                 c.listStudents();
@@ -52,16 +58,15 @@ public class Main {
                 String studentId = pk.nextLine();
                 c.searchStudent(studentId);
                 break;
-        }
+            }
+        }   
+            catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please enter a valid number.");
 
-        } while (choice != 0);
+            }
 
+    } while (choice != 0);
+      
         pk.close();
-    }
-
-    private static void inputValidation(int choice) throws WrongInputException {
-        if (choice != 0 && choice != 1) {
-            throw new WrongInputException("Enter 1 or 0 only");
-        }
     }
 }

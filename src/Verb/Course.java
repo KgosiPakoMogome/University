@@ -1,4 +1,5 @@
 package src.Verb;
+import java.lang.reflect.Member;
 import java.util.ArrayList;
 import src.models.Lecturer;
 import src.models.Student;
@@ -28,9 +29,14 @@ public class Course{
         for (Student s : students){
             if (s.getId().equals(id)){
                 System.out.println(s.getDetails());
-                return;
             }
         }
         System.out.println("Student not found");
+    }
+    
+    public Student findStudent(String id) {
+        for (Student m : students)
+            if (m.getId().equals(id)) return m;
+        return null;
     }
 }
